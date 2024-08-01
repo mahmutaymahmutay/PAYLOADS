@@ -1,7 +1,7 @@
 
 ################################################################################
 ##                                                                            ##
-##             Author: MAhmutAY   <mahmutayy@gmail.com>                       ##
+##             Author: MAhmutAY   <mahmutayy@yahoo.com>                       ##
 ##                This is a ReverseShell script                               ##
 ##                                                                            ##
 ##              This is only educational purpose usage                        ##
